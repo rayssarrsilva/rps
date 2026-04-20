@@ -33,13 +33,23 @@ function increment(humanComputer) {
 function playRound(computer, human) {
     if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
         increment("computer");
-        return console.log(`COMPUTER WON! ${getComputerChoice()} beats ${getHumanChoice()}`);
+        return console.log(`COMPUTER WON! ${computer} beats ${human}`);
     } else {
         increment("human");
-        return console.log(`YOU WON! ${getHumanChoice()} beats ${getComputerChoice()}`);
+        return console.log(`YOU WON! ${human} beats ${computer}`);
     }
 }
 
-playRound();
-console.log(humanScore);
-console.log(computerScore);
+function playGame(){
+    for (let n = 1; n <= 5; n++) {
+        playRound(getComputerChoice(), getHumanChoice());
+    }
+
+    if (humanScore > computerScore) {
+        console.log(`you WON all the ${humanScore}`);
+    } else {
+        console.log(`you LOST all the ${computerScore}`);
+    }
+}
+
+playGame();
