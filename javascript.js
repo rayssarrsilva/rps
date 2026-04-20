@@ -22,20 +22,20 @@ let humanScore = 0;
 let computerScore = 0;
 
 function increment(humanComputer) {
+    // expect the string human or computer
     if (humanComputer === "human") {
         return humanScore += 1;
     } else if (humanComputer === "computer"){
         return computerScore += 1;
     }
 }
-console.log(increment("human"));
-console.log(humanScore);
 
 function playRound(computer, human) {
-    
     if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
+        increment("computer");
         return console.log(`COMPUTER WON! ${getComputerChoice()} beats ${getHumanChoice()}`);
     } else {
+        increment("human");
         return console.log(`YOU WON! ${getHumanChoice()} beats ${getComputerChoice()}`);
     }
 }
