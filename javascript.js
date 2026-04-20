@@ -2,11 +2,11 @@ function getComputerChoice() {
     value = Math.floor(Math.random() * 3);
     
     if (value === 0) {
-        value = "Rock";
+        value = "rock";
     } else if (value === 1) {
-        value = "Paper";
+        value = "paper";
     } else {
-        value = "Scissors";
+        value = "scissors";
     }
 
     return value;
@@ -18,5 +18,17 @@ function getHumanChoice() {
     return userChoice;
 }
 
-humanScore = 0;
-computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(computer, human) {
+    if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
+        return console.log(`COMPUTER WON! ${getComputerChoice()} beats ${getHumanChoice()}`);
+    } else {
+        return console.log(`YOU WON! ${getHumanChoice()} beats ${getComputerChoice()}`);
+    }
+}
+
+playRound();
+console.log(humanScore);
+console.log(computerScore);
