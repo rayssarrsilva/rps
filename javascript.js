@@ -8,8 +8,13 @@ function getComputerChoice() {
     } else {
         value = "Scissors";
     }
-    
+
     return value;
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    userChoice = prompt("Rock, Paper or Scissors? [type one]").toLowerCase();
+    
+    return userChoice;
+}
+
