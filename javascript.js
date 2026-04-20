@@ -21,7 +21,18 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+function increment(humanComputer) {
+    if (humanComputer === "human") {
+        return humanScore += 1;
+    } else if (humanComputer === "computer"){
+        return computerScore += 1;
+    }
+}
+console.log(increment("human"));
+console.log(humanScore);
+
 function playRound(computer, human) {
+    
     if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
         return console.log(`COMPUTER WON! ${getComputerChoice()} beats ${getHumanChoice()}`);
     } else {
