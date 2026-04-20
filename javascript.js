@@ -34,9 +34,11 @@ function playRound(computer, human) {
     if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
         increment("computer");
         return console.log(`COMPUTER WON! ${computer} beats ${human}`);
-    } else {
+    } else if (human === "rock" && computer === "scissors" || human === "paper" && computer === "rock" || human === "scissors" && computer === "papel") {
         increment("human");
         return console.log(`YOU WON! ${human} beats ${computer}`);
+    } else {
+        return console.log(`TIE between YOU and COMPUTER | ${human} = ${computer}`)
     }
 }
 
