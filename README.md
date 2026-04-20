@@ -29,3 +29,9 @@ At the end ONLY ONE of you, will win. GOOD LUCK!
 3. access the console
 4. input between: rock, paper or scissors in the alert
 5. see what is shown in the console (if you won or lost, it will appear there)
+
+## Credits 
+The odin project | Foundations | Javascript Basics | Project: Rock Paper Scissors 
+
+## Autor
+note: this project was entirely wroted by Rayssa r. r. silva 
