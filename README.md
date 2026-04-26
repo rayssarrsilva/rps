@@ -7,6 +7,9 @@
 - javascript
 - html
 
+# Versions
+v1.0: Play rock, paper, scissors against the computer in the console of the webpage
+
 # Features
 - Play against the computer inside the console (v1)
 - See the track of win, loses and tie between you and the computer
