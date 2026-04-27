@@ -38,6 +38,8 @@ function playRound(computer, human) {
         increment("human");
         return console.log(`YOU WON! ${human} beats ${computer}`);
     } else {
+        increment("human");
+        increment("computer");
         return console.log(`TIE between YOU and COMPUTER | ${human} = ${computer}`)
     }
 }
@@ -47,4 +49,13 @@ const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 const score = document.querySelector(".score");
 
-playGame();
+rock.addEventListener("click", () => {
+    playRound(getComputerChoice(), "rock");
+});
+paper.addEventListener("click", () => {
+    playRound(getComputerChoice(), "paper");
+});
+
+scissors.addEventListener("click", () => {
+    playRound(getComputerChoice(), "scissors");
+});
