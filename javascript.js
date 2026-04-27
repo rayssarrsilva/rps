@@ -60,11 +60,5 @@ scissors.addEventListener("click", () => {
     playRound(getComputerChoice(), "scissors");
 });
 
-function outputWinner(){
-    if (humanScore === 5){
-        return true;
-    } else if (computerScore === 5) {
-        return false;
-    }
-}
 
+score.textContent =`Score: ${humanScore} x ${computerScore}`;
