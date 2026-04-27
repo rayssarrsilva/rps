@@ -20,6 +20,7 @@ function getHumanChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+let tie = 1;
 
 function increment(humanComputer) {
     // expect the string human or computer
@@ -27,8 +28,12 @@ function increment(humanComputer) {
         return humanScore += 1;
     } else if (humanComputer === "computer"){
         return computerScore += 1;
+    } else if (humanComputer === "tie") {
+        return tie += 1;
     }
 }
+
+const empate = document.querySelector(".empate");
 
 function playRound(computer, human) {
     if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
@@ -40,6 +45,13 @@ function playRound(computer, human) {
         console.log(`YOU WON! ${human} beats ${computer}`);
         return "human";
     } else {
+        increment("tie");
+
+        empate.textContent = "Empate";
+        setTimeout ( () => {
+            empate.textContent = "";
+        }, 1000);
+        
         console.log(`TIE between YOU and COMPUTER | ${human} = ${computer}`);
         return "tie";
     }
