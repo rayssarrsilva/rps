@@ -38,20 +38,27 @@ function playRound(computer, human) {
         increment("human");
         return console.log(`YOU WON! ${human} beats ${computer}`);
     } else {
+        increment("human");
+        increment("computer");
         return console.log(`TIE between YOU and COMPUTER | ${human} = ${computer}`)
     }
 }
 
-function playGame(){
-    for (let n = 1; n <= 5; n++) {
-        playRound(getComputerChoice(), getHumanChoice());
-    }
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+const score = document.querySelector(".score");
 
-    if (humanScore > computerScore) {
-        console.log(`you WON all the ${humanScore}`);
-    } else {
-        console.log(`you LOST all the ${computerScore}`);
-    }
-}
+rock.addEventListener("click", () => {
+    playRound(getComputerChoice(), "rock");
+});
+paper.addEventListener("click", () => {
+    playRound(getComputerChoice(), "paper");
+});
 
-playGame();
+scissors.addEventListener("click", () => {
+    playRound(getComputerChoice(), "scissors");
+});
+
+
+score.textContent =`Score: ${humanScore} x ${computerScore}`;
