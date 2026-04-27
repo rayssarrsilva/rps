@@ -42,5 +42,9 @@ function playRound(computer, human) {
     }
 }
 
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+const score = document.querySelector(".score");
 
 playGame();
