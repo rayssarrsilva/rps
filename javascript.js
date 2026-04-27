@@ -42,16 +42,5 @@ function playRound(computer, human) {
     }
 }
 
-function playGame(){
-    for (let n = 1; n <= 5; n++) {
-        playRound(getComputerChoice(), getHumanChoice());
-    }
-
-    if (humanScore > computerScore) {
-        console.log(`you WON all the ${humanScore}`);
-    } else {
-        console.log(`you LOST all the ${computerScore}`);
-    }
-}
 
 playGame();
