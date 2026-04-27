@@ -33,14 +33,15 @@ function increment(humanComputer) {
 function playRound(computer, human) {
     if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
         increment("computer");
-        return console.log(`COMPUTER WON! ${computer} beats ${human}`);
+        console.log(`COMPUTER WON! ${computer} beats ${human}`);
+        return "computer"
     } else if (human === "rock" && computer === "scissors" || human === "paper" && computer === "rock" || human === "scissors" && computer === "papel") {
         increment("human");
-        return console.log(`YOU WON! ${human} beats ${computer}`);
+        console.log(`YOU WON! ${human} beats ${computer}`);
+        return "human";
     } else {
-        increment("human");
-        increment("computer");
-        return console.log(`TIE between YOU and COMPUTER | ${human} = ${computer}`)
+        console.log(`TIE between YOU and COMPUTER | ${human} = ${computer}`);
+        return "tie";
     }
 }
 
@@ -50,14 +51,18 @@ const scissors = document.querySelector(".scissors");
 const score = document.querySelector(".score");
 
 rock.addEventListener("click", () => {
-    playRound(getComputerChoice(), "rock");
+    let resultRock = playRound(getComputerChoice(), "rock");
+    score.textContent =`Score: ${humanScore} x ${computerScore}`;
 });
+
 paper.addEventListener("click", () => {
-    playRound(getComputerChoice(), "paper");
+    let resultPaper = playRound(getComputerChoice(), "paper");
+    score.textContent =`Score: ${humanScore} x ${computerScore}`;
 });
 
 scissors.addEventListener("click", () => {
-    playRound(getComputerChoice(), "scissors");
+    let resultScissors = playRound(getComputerChoice(), "scissors");
+    score.textContent =`Score: ${humanScore} x ${computerScore}`;
 });
 
 
