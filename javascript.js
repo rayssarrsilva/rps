@@ -22,27 +22,6 @@ let humanScore = 0;
 let computerScore = 0;
 let tie = 0;
 
-function increment(humanComputer) {
-    // expect the string human or computer
-    while (true) {  
-        if (humanScore === 5){
-            break;
-        } else if (computerScore === 5) {
-            break;
-        }
-
-        if (humanComputer === "human") {
-            return humanScore += 1;
-            } else if (humanComputer === "computer"){
-                return computerScore += 1;
-            } else if (humanComputer === "tie") {
-                return tie += 1;
-        }
-
-
-    }
-}
-
 function playRound(computer, human) {
     if (computerScore === 5){
         ganhador.textContent = "You LOST";
