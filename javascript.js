@@ -24,43 +24,60 @@ let tie = 0;
 
 function increment(humanComputer) {
     // expect the string human or computer
-    if (humanComputer === "human") {
-        return humanScore += 1;
-    } else if (humanComputer === "computer"){
-        return computerScore += 1;
-    } else if (humanComputer === "tie") {
-        return tie += 1;
+    while (true) {  
+        if (humanScore === 5){
+            break;
+        } else if (computerScore === 5) {
+            break;
+        }
+
+        if (humanComputer === "human") {
+            return humanScore += 1;
+            } else if (humanComputer === "computer"){
+                return computerScore += 1;
+            } else if (humanComputer === "tie") {
+                return tie += 1;
+        }
+
+
     }
 }
-
-const empate = document.querySelector(".empate");
 
 function playRound(computer, human) {
-    if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
-        increment("computer");
-        console.log(`COMPUTER WON! ${computer} beats ${human}`);
-        return "computer"
-    } else if (human === "rock" && computer === "scissors" || human === "paper" && computer === "rock" || human === "scissors" && computer === "papel") {
-        increment("human");
-        console.log(`YOU WON! ${human} beats ${computer}`);
-        return "human";
+    if (computerScore === 5){
+        ganhador.textContent = "You LOST";
+    } else if (humanScore === 5) {
+        ganhador.textContent = "You WON";
     } else {
-        increment("tie");
+        if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
+            console.log(`COMPUTER WON! ${computer} beats ${human}`);
+            computerScore += 1;
 
-        empate.textContent = "Empate, jogue novamente";
-        setTimeout ( () => {
-            empate.textContent = "";
-        }, 1000);
+            return "computer"
+        } else if (human === "rock" && computer === "scissors" || human === "paper" && computer === "rock" || human === "scissors" && computer === "papel") {
+            console.log(`YOU WON! ${human} beats ${computer}`);
+            humanScore += 1;
 
-        console.log(`TIE between YOU and COMPUTER | ${human} = ${computer}`);
-        return "tie";
+            return "human";
+        } else {
+            if (computerScore !== 5 || humanScore != 5) { // Stop couting if some of the players in the score reach 5 points
+                console.log(`TIE between YOU and COMPUTER | ${human} = ${computer}`);
+                tie += 1;
+                return "tie";
+            }
+        }
     }
+
 }
 
+
+// Score + buttons
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 const score = document.querySelector(".score");
+const empate = document.querySelector(".empate")
+const ganhador = document.querySelector(".ganhador");
 
 rock.addEventListener("click", () => {
     let resultRock = playRound(getComputerChoice(), "rock");
