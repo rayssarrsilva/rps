@@ -93,3 +93,6 @@ scissors.addEventListener("click", () => {
 
 
 score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
+
+// Score design
+score.setAttribute("style", "font-size: 35px; text-align: center; padding-top: 70px;")
