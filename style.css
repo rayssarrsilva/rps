@@ -1,10 +1,8 @@
 /* Header title */
-:body, root, *{
+:root{
     --red: #F71616;
     --green: #33F016;
     --blue: #2617CB;
-    margin: 0;
-    padding: 0;
 }
 
 #title-rock {
@@ -32,4 +30,29 @@
     font-weight: lighter;
     text-align: center;
     font-style: bold;
+}
+
+/* Buttons */
+.rock, .paper, .scissors {
+    padding: 5px 30px;
+    border-radius: 26px;
+    color: white;
+}
+.rock {
+    background-color: var(--red);
+    border-color: var(--red);
+}
+.paper {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+.scissors {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 300px;
 }
