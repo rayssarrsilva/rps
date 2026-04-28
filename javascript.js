@@ -55,7 +55,6 @@ const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 const score = document.querySelector(".score");
-const empate = document.querySelector(".empate")
 const ganhador = document.querySelector(".ganhador");
 
 rock.addEventListener("click", () => {
@@ -96,3 +95,5 @@ score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
 
 // Score design
 score.setAttribute("style", "font-size: 35px; text-align: center; padding-top: 70px;")
+
+// Declaration of the winner design
