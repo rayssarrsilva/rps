@@ -61,16 +61,34 @@ const ganhador = document.querySelector(".ganhador");
 rock.addEventListener("click", () => {
     let resultRock = playRound(getComputerChoice(), "rock");
     score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
+    
+    if (computerScore === 5){
+    ganhador.textContent = "You LOST";
+    } else if (humanScore === 5) {
+    ganhador.textContent = "You WON";}
+
 });
 
 paper.addEventListener("click", () => {
     let resultPaper = playRound(getComputerChoice(), "paper");
     score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
+    
+    if (computerScore === 5){
+    ganhador.textContent = "You LOST";
+    } else if (humanScore === 5) {
+    ganhador.textContent = "You WON";}
+
 });
 
 scissors.addEventListener("click", () => {
     let resultScissors = playRound(getComputerChoice(), "scissors");
     score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
+
+    if (computerScore === 5){
+    ganhador.textContent = "You LOST";
+    } else if (humanScore === 5) {
+    ganhador.textContent = "You WON";}
+
 });
 
 
