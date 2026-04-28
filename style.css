@@ -1,7 +1,10 @@
+/* Header title */
 :body, root, *{
     --red: #F71616;
     --green: #33F016;
     --blue: #2617CB;
+    margin: 0;
+    padding: 0;
 }
 
 #title-rock {
@@ -19,6 +22,14 @@
     text-shadow: 2px 7px 10px rgb(166, 165, 165);
     font-weight: lighter;
 }
-.titulo {
+.title {
     text-align: center;
+}
+
+/* sub header */
+.sub-title {
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+    font-style: bold;
 }
