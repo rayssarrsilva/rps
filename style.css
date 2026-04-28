@@ -1,0 +1,24 @@
+:body, root, *{
+    --red: #F71616;
+    --green: #33F016;
+    --blue: #2617CB;
+}
+
+#title-rock {
+    color: #F71616;
+}
+#title-paper {
+    color: #33F016;
+}
+#title-scissors {
+    color: #2617CB;
+}
+
+#title-rock, #title-paper, #title-scissors {
+    font-size: 40px;
+    text-shadow: 2px 7px 10px rgb(166, 165, 165);
+    font-weight: lighter;
+}
+.titulo {
+    text-align: center;
+}
