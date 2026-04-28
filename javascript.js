@@ -29,18 +29,18 @@ function playRound(computer, human) {
         ganhador.textContent = "You WON";
     } else {
         if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
-            console.log(`COMPUTER WON! ${computer} beats ${human}`);
+            console.log(`Lost this round [${computer} beats ${human}]`);
             computerScore += 1;
 
             return "computer"
         } else if (human === "rock" && computer === "scissors" || human === "paper" && computer === "rock" || human === "scissors" && computer === "papel") {
-            console.log(`YOU WON! ${human} beats ${computer}`);
+            console.log(`Won this round [${human} beats ${computer}]`);
             humanScore += 1;
 
             return "human";
         } else {
             if (computerScore !== 5 || humanScore != 5) { // Stop couting if some of the players in the score reach 5 points
-                console.log(`TIE between YOU and COMPUTER | ${human} = ${computer}`);
+                console.log(`Tie between You and Computer [${human} = ${computer}]`);
                 tie += 1;
                 return "tie";
             }
