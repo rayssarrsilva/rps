@@ -35,10 +35,11 @@
 
 /* Buttons */
 .rock, .paper, .scissors {
-    padding: 5px 30px;
+    padding: 3px 30px;
     border-radius: 26px;
     color: white;
     border: none;
+    font-size: 25px;
 }
 .rock {
     background-color: var(--red);
@@ -52,6 +53,7 @@
 .buttons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 25px;
     padding-top: 50px;
 }
