@@ -6,8 +6,11 @@ v1.0.0: <img width="1913" height="914" alt="rpsv1" src="https://github.com/user-
 
 
 # Built with
-- javascript
-- html
+- javaScript
+- HTML
+- CSS
+- DOM Manipulation with JavaScript
+- Figma
 
 # Versions
 originally: Play rock, paper, scissors against the computer in the console of the webpage
