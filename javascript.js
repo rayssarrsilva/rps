@@ -5,7 +5,7 @@ function getComputerChoice() {
         value = "rock";
     } else if (value === 1) {
         value = "paper";
-    } else if (value === 2) {
+    } else {
         value = "scissors";
     }
 
@@ -24,9 +24,10 @@ let tie = 0;
 
 function playRound(computer, human) {
     if (computerScore === 5){
-        ganhador.textContent = "You LOST";
+        perdedor.style.visibility = "visible";
     } else if (humanScore === 5) {
-        ganhador.textContent = "You WON";
+        ganhador.style.visibility = "visible";
+        
     } else {
         if (computer === "rock" && human === "scissors" || computer === "paper" && human === "rock" || computer === "scissors" && human === "papel") {
             console.log(`Lost this round [${computer} beats ${human}]`);
@@ -92,18 +93,16 @@ perdedor.style.visibility = "hidden";
 
 function result() {
     if (computerScore === 5) {
-        score.textContent = "";
-        perdedor.style.visibility = "visible";
         ganhador;
         rock.remove();
         paper.remove();
         scissors.remove();
+        perdedor.style.visibility = "visible";
     } else if (humanScore === 5) {
-        score.textContent = "";
-        ganhador.style.visibility = "visible";
         perdedor;
         rock.remove();
         paper.remove();
         scissors.remove();
+        ganhador.style.visibility = "visible";
     }
 }
