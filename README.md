@@ -31,10 +31,9 @@ At the end ONLY ONE of you, will win. GOOD LUCK!
 
 ## How to Play
 1. open the html file
-2. open the inspector
-3. access the console
-4. input between: rock, paper or scissors in the alert
-5. see what is shown in the console (if you won or lost, it will appear there)
+3. choose between rock, paper or scissors button and click
+4. each round the score is updated
+5. see if you won or lost at the end
 
 ## Credits 
 The odin project | Foundations | Javascript Basics | Project: Rock Paper Scissors 
