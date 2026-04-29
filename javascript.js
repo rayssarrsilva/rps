@@ -58,7 +58,7 @@ const score = document.querySelector(".score");
 
 rock.addEventListener("click", () => {
     let resultRock = playRound(getComputerChoice(), "rock");
-    score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
+    score.textContent =`Score: ${humanScore} x ${computerScore} | Ties: ${tie}`;
     
     result();
 
@@ -66,20 +66,20 @@ rock.addEventListener("click", () => {
 
 paper.addEventListener("click", () => {
     let resultPaper = playRound(getComputerChoice(), "paper");
-    score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
+    score.textContent =`Score: ${humanScore} x ${computerScore} | Ties: ${tie}`;
     
     result();
 });
 
 scissors.addEventListener("click", () => {
     let resultScissors = playRound(getComputerChoice(), "scissors");
-    score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
+    score.textContent =`Score: ${humanScore} x ${computerScore} | Ties: ${tie}`;
 
     result();
 });
 
 
-score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
+score.textContent =`Score: ${humanScore} x ${computerScore} | Ties: ${tie}`;
 
 // Score design
 score.setAttribute("style", "font-size: 35px; text-align: center; padding-top: 70px;")
