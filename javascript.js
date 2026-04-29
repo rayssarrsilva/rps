@@ -5,7 +5,7 @@ function getComputerChoice() {
         value = "rock";
     } else if (value === 1) {
         value = "paper";
-    } else {
+    } else if (value === 2) {
         value = "scissors";
     }
 
