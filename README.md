@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors minigame inside inspector Console
+# Rock, Paper, Scissors minigame
 
 # Demo 
 originally:<img width="1913" height="948" alt="rps1" src="https://github.com/user-attachments/assets/0f5e07bd-f829-4c0a-8c00-0cf6af3ee536" />
