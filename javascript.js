@@ -55,7 +55,6 @@ const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 const score = document.querySelector(".score");
-const ganhador = document.querySelector(".ganhador");
 
 rock.addEventListener("click", () => {
     let resultRock = playRound(getComputerChoice(), "rock");
@@ -86,15 +85,22 @@ score.textContent =`Score: ${humanScore} x ${computerScore} | Empates: ${tie}`;
 score.setAttribute("style", "font-size: 35px; text-align: center; padding-top: 70px;")
 
 // Declaration of the winner design
+const ganhador = document.querySelector(".ganhador");
 
 function result() {
     if (computerScore === 5) {
         ganhador.textContent = "YOU LOST";
+        ganhador.setAttribute("style", "font-size: 55px; text-align: center; color: #F71616;")
+        score.textContent = "";
+        rock.remove();
+        paper.remove();
+        scissors.remove();
     } else if (humanScore === 5) {
         ganhador.textContent = "YOU WON";
-
+        ganhador.setAttribute("style", "font-size: 55px; text-align: center; color: #33F016;")
+        score.textContent = "";
+        rock.remove();
+        paper.remove();
+        scissors.remove();
     }
 }
-
-
-ganhador.setAttribute("style", "font-size: 55px; text-align: center; color: #33F016;")
