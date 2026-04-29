@@ -27,6 +27,7 @@
 
 /* sub header */
 .sub-title {
+    text-shadow: 2px 7px 10px rgb(166, 165, 165);
     font-size: 15px;
     font-weight: lighter;
     text-align: center;
